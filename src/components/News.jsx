@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { DataContext } from "../contexts/DataContext";
 import { getNews } from "../services/News";
 
@@ -19,9 +19,6 @@ const News = () => {
     setNews(datosEnv.data);
   }, [filtro])
 
-
-
-useMemo(() => console.log('Me ejecute '), [])
 
   useEffect(() => {
     searchNews(filtro);
