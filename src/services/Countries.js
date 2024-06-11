@@ -1,12 +1,12 @@
 import { ajax } from "../tools/ajax";
-import {token } from './Token'
+import { getToken } from './Token'
  
 export const getCountries = async() => {
     const optionsRequest = {
         method: "GET",
         url: 'https://www.universal-tutorial.com/api/countries/',
         headers: {
-            "Authorization": "Bearer "+ token.auth_token,
+            "Authorization": "Bearer "+ getToken.auth_token,
             "Accept": "application/json"
         },
     };

@@ -1,6 +1,6 @@
 import { ajax } from "../tools/ajax";
 
-const getToken = async() => {
+export const getToken = async() => {
     const optionsRequest = {
         method: "GET",
         url: `https://www.universal-tutorial.com/api/getaccesstoken`,
@@ -12,5 +12,3 @@ const getToken = async() => {
       };
     return await ajax(optionsRequest);
 }
-
-export const token = await getToken();
